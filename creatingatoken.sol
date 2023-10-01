@@ -6,19 +6,19 @@ contract MyToken {
   // public variables here
     string public tokenName = "META";
     string public tokenAbbry = "HTA";
-    uint public totalSupply = 0;
+    unit public totalSupply = 0;
 
  // mapping variable here
-    mapping(address => uint) public balances;
+    mapping(address => unit) public balances;
 
 // mint function
-    function mint (address _address, uint _value) public {
+    function mint (address _address, unit _value) public {
        totalSupply += _value;
        balances[_address] += _value;
     }
 
 // burn function
-    function burn (address _address, uint _value) public {
+    function burn (address _address, unit _value) public {
        if (balances[_address] >= _value) {
           totalSupply -= _value;
           balances[_address] -= _value;
